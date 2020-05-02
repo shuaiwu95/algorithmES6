@@ -29,4 +29,3 @@ for (let i = 2; i < 20; i ++) {
     // 根据 斐波那契数列 规则（F(1)=1，F(2)=1, F(n)=F(n - 1)+F(n - 2)（n ≥ 3，n ∈ N*））我们可以如下编写程序
     fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]
 }
-console.log(fibonacci)

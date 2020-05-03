@@ -1,4 +1,4 @@
-/* 数组合并 */
+/* 1.4.1.数组合并 */
 const arrayData1 = [0, 1, 2]
 const arrayData2 = [3, 4, 5, 6]
 const arrayData3 = [7, 8]
@@ -15,7 +15,7 @@ const evenNumbers = numbers.filter(item => {
 })
 // evenNumbers 的运行结果为 [2,  4,  6, 8, 10, 12, 14]
 
-/* 搜索和排序 */
+/* 1.4.2.搜索和排序 */
 const numbers2 = [2, 5, 8, 6, 3, 7]
 // 数组倒序
 numbers2.reverse()
@@ -96,7 +96,7 @@ person2.sort((a, b) => {
 })
 // 输出结果 [ 'Maeve', 'Maève' ]
 
-/* 搜索 */
+/* 1.4.3.搜索 */
 // 搜索有两个方法：indexOf方法返回与参数匹配的第一个元素的索引，lastIndexOf返回与参数匹配的最后一个元素的索引。
 const searchNumbers = [5, 5, 5, 6, 8, 2, 3, 1]
 searchNumbers.indexOf(5) 

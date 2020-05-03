@@ -1,4 +1,4 @@
-/* 创建 声明数组 */
+/* 1.1.1.创建 声明数组 */
 
 // 声明一个数组
 const daysOfWeek = new Array()

@@ -1,4 +1,4 @@
-/* 队列 */
+/* 2.2.1.队列 */
 
 // 基础理论：
 // “队列” 是遵循 “先进先出” 原则的一项有序数列
@@ -75,9 +75,9 @@ class Queue {
 const queue = new Queue()
 queue.enqueue("xiaoli")
 queue.enqueue("laowang")
-queue.print()
+queue.print() // xiaoli,laowang
 
-/* 优先队列 */
+/* 2.2.2.优先队列 */
 
 // 应用场景：
 // 比如说，乘坐高铁，军人、普通乘客、商务座的检票顺序就不同。
@@ -186,11 +186,21 @@ priorityQueue.enqueue("bbbb", 11)
 priorityQueue.enqueue("cccc", 8)
 priorityQueue.enqueue("dddd", 12)
 priorityQueue.print()
+// 运行结果如下：
+/*
+[
+  QueueElement { element: 'cccc', priority: 8 },
+  QueueElement { element: 'aaaa', priority: 10 },
+  QueueElement { element: 'bbbb', priority: 11 },
+  QueueElement { element: 'dddd', priority: 12 }
+]
+*/
 
 // 总结一下“优先队列”：
 // 简单来说，就是当我们按照顺序入队列时，如果在当前队列里，找到权重比新加元素小的数据，那就可以让新增元素“插队”到该元素前面
 // 这样，队列里的元素在入队的时候就会按照权重来排序，在出队的时候，就可以按照权重从大到小和入队顺序来展示了！
 // 出队顺序为 权重优先，其次为先入先出原则
 
-/* 循环队列 */
-// 下面我将要用一个经典的案例 —— “击鼓传花”，来讲解“队列”中的 “循环队列”
+/* 2.2.3.循环队列 */
+// 下面我将要用一个经典的案例 —— 小游戏 “击鼓传花”，来讲解“队列”中的 “循环队列”
+// 游戏规则：

@@ -9,3 +9,7 @@
 ### 如有不妥和错误的地方欢迎指正 
 ### 本人邮箱 lishuaiwu5201314@gmail.com
 ### LSW1048587977 加我微信拉你入交流群！！！
+
+```
+[参考资料] 《Learning JavaScript Data Structures and Algorithums》· Loiance Groner
+```

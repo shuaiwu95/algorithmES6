@@ -204,3 +204,40 @@ priorityQueue.print()
 /* 2.2.3.循环队列 */
 // 下面我将要用一个经典的案例 —— 小游戏 “击鼓传花”，来讲解“队列”中的 “循环队列”
 // 游戏规则：
+/*
+    在这个游戏中，孩子们围成一个圆圈，把花尽快地传递给旁边的人。某一时刻传花停止，
+    这个时候花在谁手里，谁就退出圆圈结束游戏。重复这个过程，直到只剩一个孩子（胜者）
+*/
+// 模拟程序：
+/* 
+ * nameList 参与游戏者的名单
+ * num 规定迭代的次数
+ */
+const hotPotato = (nameList, num) => {
+    const queue = new Queue() // 队列对象
+    for (let i = 0; i < nameList.length; i ++){
+        queue.enqueue(nameList[i]) // 将参与者的名字加入队列中
+    }
+    let eliminated = '' // 当前轮次被淘汰的人
+    while (queue.size() > 1){ // 如果未被淘汰的人数多余1人，那么继续游戏
+        for (let i = 0; i < num; i ++){
+            queue.enqueue(queue.dequeue()) // 在规定迭代次数内，持续对数列进行出队入队操作（处于安全期的人）
+        }
+        eliminated = queue.dequeue() // 规定迭代次数完成后，获取到了当前被淘汰的人
+        console.log(eliminated + '在本轮游戏被淘汰！');
+    }
+    return queue.dequeue() // 最后只剩下一个人的时候，这个人就是胜者
+}
+
+const names = ['李二狗', '王二狗', '张三', '刘二蛋', '赵铁蛋']
+const winner = hotPotato(names, 10)
+console.log('胜利者：' + winner)
+
+// 运行结果如下：
+/*
+    李二狗在本轮游戏被淘汰！
+    刘二蛋在本轮游戏被淘汰！
+    王二狗在本轮游戏被淘汰！
+    张三在本轮游戏被淘汰！
+    胜利者：赵铁蛋
+*/
